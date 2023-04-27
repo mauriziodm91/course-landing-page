@@ -11,7 +11,7 @@ const Topics = () => {
       <div className='wrapper'>
         <h2>What will you learn?</h2>
         <div className='content-container'>
-          <ul>
+          <ul className='topics-list'>
             {topics.map(({ description, image }, id) => (
               <li key={id} onMouseEnter={() => setCurrentImage(image)}>
                 {description}
