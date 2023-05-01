@@ -47,6 +47,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          <div className='copyright mobile'>
+            {`This website is designed by MDM Ⓒ ${new Date().getFullYear()}`}
+          </div>
         </div>
       </div>
     </footer>
