@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
 
             <div className='copyright'>
-              This website is designed by MDM Ⓒ 2023
+              {`This website is designed by MDM Ⓒ ${new Date().getFullYear()}`}
             </div>
           </div>
 
