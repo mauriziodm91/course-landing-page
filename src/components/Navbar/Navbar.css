@@ -30,6 +30,11 @@ a.logo .red {
   color: var(--red-color);
 }
 
+.menu-icon,
+.mobile-menu-container {
+  display: none;
+}
+
 /* Tablet query */
 
 @media (max-width: 1040px) {
@@ -50,5 +55,39 @@ a.logo .red {
     left: 32px;
     right: 32px;
     top: 16px;
+  }
+
+  nav .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu-container {
+    display: flex;
+    position: fixed;
+    z-index: 600;
+    background: var(--dark-color);
+    left: 0;
+    right: 0;
+    padding: 60px 32px;
+  }
+
+  .mobile-menu-container .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+  }
+
+  .mobile-menu-container .menu-items li a {
+    font-weight: 800;
+    font-size: 16px;
+    padding: 20px 0;
+    display: inline-block;
+    color: #fff;
   }
 }
