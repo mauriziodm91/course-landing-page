@@ -1,8 +1,12 @@
+import { useState } from 'react'
+
 import MenuIcon from '../../assets/MenuIcon.svg'
 import Close from '../../assets/close.svg'
 import './Navbar.css'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
       <nav>
@@ -24,26 +28,34 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className='menu-icon'>
+        <div onClick={() => setIsOpen(true)} className='menu-icon'>
           <img src={MenuIcon} alt='' />
         </div>
       </nav>
-      <div className='mobile-menu-container'>
-        <div className='close-icon'>
+      <div className={`mobile-menu-container ${isOpen ? 'active' : ''}`}>
+        <div onClick={() => setIsOpen(false)} className='close-icon'>
           <img src={Close} alt='' />
         </div>
         <ul className='menu-items'>
           <li>
-            <a href='#topics'>Course Details</a>
+            <a href='#topics' onClick={() => setIsOpen(false)}>
+              Course Details
+            </a>
           </li>
           <li>
-            <a href='#info'>About</a>
+            <a href='#info' onClick={() => setIsOpen(false)}>
+              About
+            </a>
           </li>
           <li>
-            <a href='#blog'>Blog</a>
+            <a href='#blog' onClick={() => setIsOpen(false)}>
+              Blog
+            </a>
           </li>
           <li>
-            <a href='#testimonials'>Testimonials</a>
+            <a href='#testimonials' onClick={() => setIsOpen(false)}>
+              Testimonials
+            </a>
           </li>
         </ul>
       </div>
